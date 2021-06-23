@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        /*行内块特点：
+               1.支持全部样式
+               2.如果没有设置宽和高，宽高由内容决定
+               3.盒子并在一行
+               4.代码换行，盒子会产生间距
+               5.子元素是内联块元素，父元素可以用text-align属性设置子元素水平对齐方式
+        */ 
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 50px auto 0;
+            font-size: 0px;
+        }
+
+        .box a{
+            width: 100px;
+            height: 50px;
+            background-color: gold;
+            font-size: 20px;
+            display: inline-block; /*将内联元素转为块元素*/
+            
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">链接文字1</a>
+        <a href="#">链接文字2</a>
+        <a href="#">链接文字3</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素转换练习</title>
+    <style type="text/css">
+
+        .box{
+            text-align: center;
+            font-size: 0px;
+            width: 694px;
+            height: 50px;
+            margin: 50px auto 0;
+        }
+
+        .box a{
+            border: 1px solid gold;
+            font-size: 16px;
+            font-family: 'Microsoft Yahei';
+            display: inline-block;
+            height: 48px;
+            width: 98px;
+            color: pink;
+            text-decoration: none;
+            margin-top: 16px;
+            margin-left: -1px; /* 解决两个盒子公用一条边的问题*/
+            line-height: 48px; /* 将line-height设置与height一致可以出现垂直居中*/
+        }
+
+        .box a:hover{
+            background-color: orange;
+            color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">首页</a>
+        <a href="#">公司简介</a>
+        <a href="#">解决方案</a>
+        <a href="#">公司新闻</a>
+        <a href="#">行业动态</a>
+        <a href="#">招贤纳才</a>
+        <a href="#">联系我们</a>
+    </div>
+</body>
+</html>
