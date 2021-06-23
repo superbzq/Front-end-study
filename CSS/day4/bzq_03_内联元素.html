@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        .box{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 50px auto 0;
+            font-size: 0px;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: gold;
+        }
+
+        /* 1.行内元素不支持width,height padding左右,margin左右
+           2.行内元素都在同一行
+           3.代码换行，盒子之间会产生间距   将父元素的font-size设为0，子元素重新设置font-size能够解决
+           4.子元素是内联元素，父元素可以用text-align属性设置水平对齐方式
+           5.宽和高由内容决定
+           
+           a span em b strong i 是行内元素（内联元素）*/
+        .box a{
+            background-color: gold;
+            font-size: 20px;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a href="#">链接文字1</a>
+        <a href="#">链接文字2</a>
+        <a href="#">链接文字3</a>
+    </div>
+</body>
+</html>
