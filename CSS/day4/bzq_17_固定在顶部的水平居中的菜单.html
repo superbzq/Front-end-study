@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定在顶部的水平居中的菜单</title>
+    <style type="text/css">
+        .menu{
+            width: 960px;
+            height: 80px;
+            background-color: gold;
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            margin-left: -480px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .popup{
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: white;
+            position: fixed;
+            left: 50%;
+            margin-left: -251px;
+            top: 50%;
+            margin-top: -151px;
+            z-index: 9999;
+        }
+
+        .popup h2{
+            background-color: gold;
+            margin: 10px;
+            height: 40px;
+        }
+
+        .mask{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            left: 0;
+            top: 0px;
+            opacity: 0.5;
+            z-index: 9998;
+        }
+
+        .pop_con{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">菜单文字</div>
+
+    <div class="pop_con">
+        <div class="popup"><h2>弹框的标题</h2></div>
+
+        <div class="mask"></div>
+    </div>
+    
+
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>网页文字</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
