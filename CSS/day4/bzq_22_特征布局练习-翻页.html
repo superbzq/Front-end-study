@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻页练习</title>
+    <Style type="text/css">
+        .menu{
+            width: 600px ;
+            height: 40px;
+            border: 1px solid silver;
+            list-style: none;
+            margin:0px ;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .menu li{
+            display: inline-block;
+            width: 30px;
+            height: 26px;
+            margin-top: 7px;
+            background-color: gold;
+            
+
+        }
+
+        .menu li a{
+            display: inline-block;
+            text-decoration: none;
+            height: 26px;
+            width: 30px;
+            line-height: 26px;
+            font-size: 12px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: black;
+            
+        }
+
+        .menu li a:hover{
+            background-color: blue;
+            color: white;
+        }
+
+        .menu .hhh{
+            width: 90px;
+        }
+
+        p{
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+        }
+
+    </Style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="hhh"><a href="#">上一页</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <p>...</p>
+        <li><a href="3">17</a></li>
+        <li><a href="#">18</a></li>
+        <li><a href="#">19</a></li>
+        <li><a href="#">20</a></li>
+        <li class="hhh"><a href="#">下一页</a></li>
+    </ul>
+</body>
+</html>
