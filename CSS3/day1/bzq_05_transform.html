@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform只能变换</title>
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            background-color:gold;
+            margin: 50px auto 0;
+
+             /* translate比定位的性能要高 */
+            transform: translate(0px, 0px);
+            transition: all 1s ease;
+        }
+
+        .box:hover{
+            transform: translate(30px, 30px)
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            background-color:gold;
+            margin: 50px auto 0;
+
+             /* translate比定位的性能要高 */
+            transform: scale(1,1);
+            transition: all 1s ease;
+        }
+
+        .box2:hover{
+            transform: scale(2,2);
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            background-color:gold;
+            margin: 50px auto 0;
+
+             /* translate比定位的性能要高 */
+            transform: rotate(0deg);
+            transition: all 1s ease;
+        }
+
+        .box3:hover{
+            transform: rotate(45deg)
+        }
+
+        .box4{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            background-color:gold;
+            margin: 50px auto 0;
+
+             /* translate比定位的性能要高 */
+            transform:skew(0,0);
+            transition: all 1s ease;
+        }
+
+        .box4:hover{
+            transform: skew(45deg,0)
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

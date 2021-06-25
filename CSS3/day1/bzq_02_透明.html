@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background:url(images/adv01.jpg)
+        }
+
+        .box{
+            width:300px;
+            height: 100px;
+            background-color: black;
+            color: #fff;
+            font: size 20px;
+            text-align: center;
+            line-height:100px;
+
+            /* 透明度的完整写法 */
+            opacity:0.3;
+            /* 兼容IE */
+            filter: alpha(opacity=30);
+        }
+
+        .box2{
+            width:300px;
+            height: 100px;
+            background-color: rgb(0,0,0,0.3); /* 只设置背景透明，文字不变*/
+            color: #fff;
+            font: size 20px;
+            text-align: center;
+            line-height:100px;
+    
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">这是一个div</div>
+    <br />
+    <div class="box2">这是er个div</div>
+</body>
+</html>
