@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation动画</title>
+    <style type="text/css">
+        /* 定义动画 */
+        
+        @keyframes moving {
+            from {
+                width: 100px;
+            }
+            to {
+                width: 500px;
+            }
+        }
+        
+        @keyframes move1 {
+            from {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            to {
+                position: absolute;
+                left: 500px;
+                top: 0px;
+            }
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation: moving 2s ease infinite alternate;
+            animation: move1 2s linear infinite alternate;
+            border-radius: 50px;
+        }
+        
+        .box:hover {
+            animation-play-state: paused;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            animation: moving 1s linear 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <!-- <div class="box2"></div> -->
+
+</body>
+
+</html>

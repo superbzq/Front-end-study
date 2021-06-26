@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpor8t" content="width=device-width, initial-scale=1.0">
+    <title>CSS权重</title>
+    <style type="text/css">
+        /* 权重的等级
+        可以把样式的应用方式分为几个等级，按照等级来计算权重
+        1. !important,加在属性值后，权重值为10000
+        2. 内联样式，如style="",权重值为1000
+        3. ID选择器，如#content，权重值为100
+        4. 类，伪类和属性选择器，如content、:hover权重值为10
+        5. 标签选择器和伪元素选择器，如div、p、::before权重值为1
+        6. 通用选择器（ *）、子选择器（>)、相邻选择器(+)、同胞选择器(~)的权重值为0
+        */
+        
+        .box {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="color: royalblue;">这是一个div元素</div>
+</body>
+
+</html>

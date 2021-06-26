@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻转动画</title>
+    <style type="text/css">
+        .box {
+            width: 700px;
+            height: 272px;
+            border: 3px solid black;
+            margin: 50px auto 0;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .box img {
+            position: absolute;
+            left: 200px;
+            top: 0px;
+            transform: perspective(800px) rotateY(0deg);
+            transition: all 1s ease;
+            backface-visibility: hidden;
+        }
+        
+        .box:hover img {
+            transform: rotateY(180deg);
+        }
+        
+        .box .back {
+            width: 300px;
+            height: 272px;
+            background-color: pink;
+            position: absolute;
+            left: 200px;
+            top: 0px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 272px;
+            transform: perspective(800px) rotateY(180deg);
+            transition: all 500ms ease 250ms;
+            backface-visibility: hidden;
+        }
+        
+        .box:hover .back {
+            transform: perspective(800px) rotateY(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/location_bg.jpg" alt="背景图">
+        <div class="back">图片的说明文字</div>
+    </div>
+</body>
+
+</html>

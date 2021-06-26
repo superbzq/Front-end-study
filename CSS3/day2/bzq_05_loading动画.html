@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading动画</title>
+    <style type="text/css">
+        @keyframes loading {
+            from {
+                transform: scaleY(1);
+            }
+            to {
+                transform: scaleY(0.5);
+            }
+        }
+        
+        .con {
+            width: 300px;
+            height: 158px;
+            border: 1px solid;
+            margin: 50px auto 0;
+        }
+        
+        .con div {
+            width: 30px;
+            height: 100px;
+            float: left;
+            background-color: gold;
+            margin: 15px;
+            border-radius: 15px;
+            animation: loading 500ms ease infinite alternate;
+        }
+        
+        .con div:nth-child(1) {
+            background-color: red;
+        }
+        
+        .con div:nth-child(2) {
+            background-color: green;
+            animation-delay: 100ms;
+        }
+        
+        .con div:nth-child(3) {
+            background-color: pink;
+            animation-delay: 200ms;
+        }
+        
+        .con div:nth-child(4) {
+            background-color: lightgreen;
+            animation-delay: 300ms;
+        }
+        
+        .con div:nth-child(5) {
+            background-color: lightblue;
+            animation-delay: 400ms;
+        }
+        
+        .con p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <p class="loading">loading...</p>
+    </div>
+</body>
+
+</html>

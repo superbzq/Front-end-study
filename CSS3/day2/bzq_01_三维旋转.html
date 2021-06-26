@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 3px solid black;
+            margin: 50px auto;
+            /* 做变形动画需要设置初始值,不设置容易出现跳变的bug */
+            transition: all 1s ease;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateY(0deg);
+        }
+        
+        .box:hover {
+            transform: perspective(800px) rotateY(45deg);
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 3px solid black;
+            margin: 50px auto;
+            /* 做变形动画需要设置初始值,不设置容易出现跳变的bug */
+            transition: all 1s ease;
+            transform: perspective(800px) rotateX(0deg);
+        }
+        
+        .box2:hover {
+            transform: perspective(800px) rotateX(45deg);
+        }
+        
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            border: 3px solid black;
+            margin: 50px auto;
+            /* 做变形动画需要设置初始值,不设置容易出现跳变的bug */
+            transition: all 1s ease;
+            transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+        }
+        
+        .box3:hover {
+            transform: perspective(800px) rotateX(45deg) rotateY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>

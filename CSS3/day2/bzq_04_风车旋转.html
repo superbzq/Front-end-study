@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风车旋转动画</title>
+    <style type="text/css">
+        @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .zhuan {
+            display: block;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto 0;
+            animation: rotating 1s linear infinite;
+        }
+        
+        .zhuan:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/zhuan.jpg" alt="" class="zhuan">
+</body>
+
+</html>
