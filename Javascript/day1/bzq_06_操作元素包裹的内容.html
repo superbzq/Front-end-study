@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv = document.getElementById('div1')
+            var sTr = oDiv.innerHTML
+            alert(sTr)
+            oDiv.innerHTML = '修改的文字'
+                // 可以插入标签
+            oDiv.innerHTML = '<a href = "http://www.itcast.cn">a</a>'
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        这是一个div元素
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // document.getElementById('div1').style.color = 'red';
+            // document.getElementById('div1').style.fontSize = '30px'
+
+            var oDiv = document.getElementById('div1');
+            oDiv.style.color = 'green';
+            oDiv.style.fontSize = '30px';
+            oDiv.style.fontWeight = 'bold';
+            oDiv.style.fontStyle = 'italic'
+                // oDiv.style.color, fontSize, fontWeight, fontStyle = 'green', '30px', 'bold', 'italic'; 这种写法不行
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="div1">这是一个div对象</div>
+
+</body>
+
+</html>

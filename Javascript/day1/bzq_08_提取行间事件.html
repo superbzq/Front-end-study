@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提取行间事件</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oBtn = document.getElementById('btn01')
+                // 将事件属性和一个函数关联，函数不能写小括号，写了会马上执行
+            oBtn.onclick = fnChange
+
+            function fnChange() {
+                var oDiv = document.getElementById('div1')
+                oDiv.style.color = 'red'
+                oDiv.style.fontSize = '30px'
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" onclick="fnMyalert()">这是一个div元素
+    </div>
+    <input type="button" value="改变div" id="btn01">
+</body>
+
+</html>
