@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            /*
+            $('#input1').focus(function() {
+                alert('获得焦点')
+            })
+            */
+            $('#input1').focus() //一般用法，进入页面直接获得焦点，可以直接输入文字等同于autofocus属性 只能是一个元素获得焦点
+
+            // blur失去焦点
+            $('#input1').blur(function() {
+                var sVal = $(this).val()
+
+
+                alert(sVal)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="input1">
+        <input type="text" id="input2">
+        <input type="submit" id="submit" value="提交">
+    </form>
+
+</body>
+
+</html>
