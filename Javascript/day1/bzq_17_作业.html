@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oInput1 = document.getElementById('input1')
+            var oInput2 = document.getElementById('input2')
+            var oBtn = document.getElementById('btn1')
+            oBtn.onclick = function() {
+                var c = oInput1.value + oInput2.value
+                alert(c)
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input1">+
+    <input type="text" id="input2">=
+    <input type="button" value="相加" id="btn1">
+</body>
+
+</html>

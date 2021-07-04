@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv = document.getElementById('div1')
+                // 实际开发中需要读取后台的时间，可以通过ajax来读取
+            function fnDjs() {
+                var iNow = new Date()
+                    // 未来时间2021年7月6日零点
+                var sFuture = new Date(2021, 6, 5, 24, 0, 0)
+                    // 计算剩余多少秒
+                var sLeft = parseInt((sFuture - iNow) / 1000)
+
+                // 计算天数
+                var iDay = parseInt(sLeft / 86400)
+                    // 计算小时
+                var iHour = parseInt((sLeft % 86400) / 3600)
+                    // 计算分钟
+                var iMinute = parseInt(((sLeft % 86400) % 3600) / 60)
+                    // 计算秒
+                var iSecond = parseInt((((sLeft % 86400) % 3600) % 60) % 60)
+                var sTr = '距离7月6日还剩：' + iDay + '天' + iHour + '小时' + iMinute + '分' + iSecond + '秒'
+                oDiv.innerHTML = sTr
+            }
+            fnDjs()
+            setInterval(fnDjs, 1000)
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+
+    </div>
+</body>
+
+</html>

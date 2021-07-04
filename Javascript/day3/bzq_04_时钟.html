@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv1 = document.getElementById('div1')
+
+            function fnTimego() {
+                var sNow = new Date()
+                    // 获取年份
+                var iYear = sNow.getFullYear()
+                    // 月份是0-11，奇怪
+                var iMonth = sNow.getMonth() + 1
+                    // 号数
+                var iDay = sNow.getDate()
+                    // 周几,星期 是0-6
+                var iWeek = sNow.getDay()
+                    // 小时
+                var iHour = sNow.getHours()
+                    // 分钟
+                var iMinutes = sNow.getMinutes()
+                    // 秒钟
+                var iSec = sNow.getSeconds()
+                var sTr = '当前时间是:' + iYear + '年' + iMonth + '月' + iDay + '日' + fnToweek(iWeek) + ' ' + fnTodouble(iHour) + ':' + fnTodouble(iMinutes) + ':' + fnTodouble(iSec)
+                oDiv1.innerHTML = sTr
+            }
+            fnTimego()
+            setInterval(fnTimego, 1000)
+
+
+
+            function fnToweek(n) {
+                if (n == 0) {
+                    return '星期日'
+                } else if (n == 1) {
+                    return '星期一'
+                } else if (n == 2) {
+                    return '星期二'
+                } else if (n == 3) {
+                    return '星期三'
+                } else if (n == 4) {
+                    return '星期四'
+                } else if (n == 5) {
+                    return '星期五'
+                } else if (n == 6) {
+                    return '星期六'
+                }
+
+            }
+
+            function fnTodouble(n) {
+                if (n < 10) {
+                    return '0' + n
+                } else {
+                    return n
+                }
+            }
+        }
+    </script>
+    <style type="TEXT/CSS">
+        div{ text-align: center; }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+
+</html>

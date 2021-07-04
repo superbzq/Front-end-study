@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通过标签获取元素</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            // 生成一个选择集
+            // var aLi = document.getElementsByTagName('li')
+            //     // 选择集内的个数
+            // alert(aLi.length)
+            // var iLen = aLi.length
+            //     // 不能给选择集设置样式属性
+            //     // 通过循环来修改单个li的样式属性
+            // for (var i = 0; i < iLen; i++) {
+            //     aLi[i].style.listStyle = 'none'
+            // }
+            var oUl = document.getElementById('list1')
+            var aLi2 = oUl.getElementsByTagName('li')
+            var iLen2 = aLi2.length
+            for (var i = 0; i < iLen2; i++) {
+                if (i % 2 == 0) {
+                    aLi2[i].style.backgroundColor = 'red'
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="list1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <ul id="list2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+
+    </ul>
+</body>
+
+</html>

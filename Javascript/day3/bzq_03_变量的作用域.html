@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的作用域</title>
+    <script type="text/javascript">
+        // 函数外部定义的是全局变量，函数内部和外部都可以访问
+        var iNum1 = 12
+
+        function moving() {
+            // 函数内部定义的是局部变量，函数内部可以访问，外部不能访问
+            var iNum1 = 11
+            var iNum2 = 36
+            alert(iNum1)
+        }
+
+        moving()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

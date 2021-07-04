@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+    <script type="text/javascript">
+        // var aList1 = new Array(1, 2, 3) 通过类实例化来创建数组
+        var aList2 = [1, 2, 3] //通过直接量的方式来创建
+        alert(aList2.length) //获取长度
+        alert(aList2[1]) //取值
+            /* push:在数组后面加内容
+            pop:删除末尾那个内容*/
+        aList2.push('a')
+        alert(aList2)
+        aList2.reverse() //反转数组
+        alert(aList2)
+            /* unshift:在前端接入一个成员
+            shift：删除队首*/
+        aList2.shift()
+        alert(aList2)
+        aList2.unshift(2)
+        alert(aList2)
+            //返回对象第一次出现的索引值
+        var aList3 = ['a', 'b', 'c']
+        alert(aList3.indexOf('b'))
+            /*第一个参数表示索引值，第二个参数表示删除索引后面的几个，后面的参数表示要加入的内容*/
+        aList3.splice(0, 2, 'h', 'h', 'h')
+        alert(aList3)
+        var sTR = aList3.join('-')
+        alert(sTR)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

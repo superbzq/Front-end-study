@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择过滤器</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            /*var $div = $('div')
+            $div.css({
+                'backgroundColor': 'red'
+            })*/
+            $('div').css({
+                'backgroundColor': 'blue'
+            })
+
+            $('div').has('p').css({
+                'fontSize': '30px'
+            })
+
+            $('div').eq(6).css({
+                'textIndent': '2em'
+            })
+            $('div').eq(6).prev().css({
+                'color': 'pink'
+            })
+            $('div').eq(6).next().css({
+                'color': 'red'
+            })
+            $('div').eq(7).find('.span').css({
+                'backgroundColor': 'white'
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>
+        <p>2</p>
+    </div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div><span>8</span><span class="span">9</span></div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串的处理方法</title>
+    <script type="text/javascript">
+        var iNum1 = 12
+        var sNum2 = '24'
+        var sTr = 'abc'
+            // 数字和字符串相加等同于字符串拼接
+        alert(iNum1 + sNum2) //弹出1224、
+
+        var sTr2 = '12.35'
+            // parseInt将字符串的小数转化为整数
+            //parseFloat 将字符串转化为小数
+        alert(parseInt(sTr2)) //弹出12
+        alert(parseFloat(sTr2))
+
+        var sTr3 = '2017-4-22'
+        var aRr = sTr3.split('-')
+        alert(aRr.length)
+        var sTr4 = 'abcdefghijk'
+        var sTr4R = sTr4.split("").reverse().join("")
+        alert(sTr4R)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
