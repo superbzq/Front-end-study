@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            /*
+            $('#btn').click(function() {
+
+            })
+            */
+            //    点击或者鼠标移入的时候都执行绑定的匿名函数
+            $('#btn').bind('click mouseover', function() {
+                alert('触发事件绑定的函数')
+                    // 解除了mouseover的绑定
+                $(this).unbind('mouseover')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn">
+</body>
+
+</html>

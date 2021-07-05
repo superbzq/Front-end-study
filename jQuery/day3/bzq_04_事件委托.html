@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .list {
+            width: 100%;
+            height: 600px;
+            background-color: gold;
+            list-style: none;
+        }
+        
+        .list li {
+            width: 600px;
+            height: 50px;
+            line-height: 50px;
+            margin: 20px auto 0;
+            background-color: green;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            /*
+            $('.list li').click(function() {
+                $(this).css({
+                    'backgroundColor': 'red'
+                })
+            })
+            */
+
+            $('.list').delegate('li', 'click', function() {
+                //$(this) 指的是委托的子元素
+                $(this).css({
+                    'backgroundColor': 'red'
+                });
+
+            })
+            var $li = $('<li>9</li>')
+            $('.list').append($li)
+        })
+    </script>
+</head>
+
+<body>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</body>
+
+</html>

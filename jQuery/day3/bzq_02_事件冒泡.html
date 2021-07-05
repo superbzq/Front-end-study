@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件冒泡</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            /* 子集的事件会向上层传递(沿着标签的顺序，不是布局的顺序)，如果上层也绑定了这个事件，那么也会执行一次函数*/
+            // event是发生事件的时候的事件对象，使用的时候通过参数传递进入
+            $('.son').click(function(event) {
+                alert(1)
+                event.stopPropagation()
+            })
+            $('.father').click(function(event) {
+                alert(2)
+                    // event.stopPropagation()
+                return false //阻止冒泡和默认行为
+            })
+            $('.grandfather').click(function() {
+                alert(3)
+            })
+        })
+    </script>
+    <style>
+        .grandfather {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: relative;
+        }
+        
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+        
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function() {
+            $('#btn').click(function() {
+                $('.pop_con').show()
+                return false
+            })
+            $(document).click(function() {
+                $('.pop_con').hide()
+            })
+            $('.pop').click(function() {
+                return false
+            })
+        })
+    </script>
+    <title>弹框</title>
+    <style>
+        .pop {
+            position: fixed;
+            width: 500px;
+            height: 300px;
+            background-color: #fff;
+            border: 3px solid #000;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -150px;
+            z-index: 9999;
+        }
+        
+        .mask {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+            left: 0;
+            top: 0;
+            z-index: 9990;
+        }
+        
+        .pop_con {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="弹出" id="btn">
+    <div class="pop_con">
+        <div class="pop">
+            弹框里面的文字 投资金额：
+            <input type="text">
+        </div>
+        <div class="mask">
+
+        </div>
+    </div>
+</body>
+
+</html>
